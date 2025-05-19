@@ -15,7 +15,7 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
               setReadMore(!readMore);
             }}
           >
-            {readMore ? "showless" : "showMore"}
+            {readMore ? "Show less" : "See more"}
           </button>
         </p>
         <span className="tour-price">{price}</span>

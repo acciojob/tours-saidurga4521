@@ -7,7 +7,7 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
       <div className="single-tour">
         <h2>{name}</h2>
         <img src={image} />
-        <p className="tour-info">
+        <p id={`tour-item-para-${id}`} className="tour-info">
           {readMore ? info : `${info.substring(0, 200)}...`}
           <button
             onClick={() => {
@@ -19,7 +19,7 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
         </p>
         <span className="tour-price">{price}</span>
         <button
-          key={`btn-id${id}`}
+          id={`delete-btn-${id}`}
           className="delete-btn"
           onClick={() => {
             removeTour(id);
